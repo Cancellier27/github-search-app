@@ -1,0 +1,110 @@
+body {
+    margin: 10px;
+}
+
+.app {
+    display: grid;
+    grid-template-areas: 
+    "search"
+    "user"
+    "button"
+    "repos"
+    "starred";
+    grid-template-rows: auto 150px auto auto auto;
+
+    column-gap: 10px;
+    row-gap: 10px;
+}
+
+.search {
+    grid-area: search;
+    margin-bottom: 5px;
+    padding: 0;
+}
+
+.search > input {
+    width: 100%;
+}
+
+
+img {
+    height: 150px;
+    width: 150px;
+    border: 1px solid #ccc;
+    grid-area: picture;
+
+}
+
+ul {
+    list-style-type: none;
+    text-decoration: none;
+    padding: 0;
+}
+
+li {
+    font-size: 0.8em;
+}
+
+.user-info {
+    grid-area: user;
+
+    display: grid;
+    grid-template-areas: 
+        "picture name name"
+        "picture info info";
+    grid-template-columns: 150px auto auto;
+}
+
+h1 {
+    font-size: 1.6em;
+}
+
+.username {
+    grid-area: name;
+    padding: 0 0 0 30px;
+}
+
+.repos-info {
+    grid-area: info;
+    padding: 0 0 0 30px;
+    margin: 0 0 10px 0;
+}
+
+.actions {
+    grid-area: button
+}
+
+.repos {
+    grid-area: repos
+}
+
+.starred {
+    grid-area: starred
+}
+
+.actions > button {
+    margin-right: 5px;
+    width: 170px;
+}
+
+.starred li,
+.repos li {
+    padding: 0.5em 0;
+    border-bottom: 1px solid #ccc;
+}
+
+.starred li:last-child,
+.repos li:last-child {
+    border-bottom: none;
+}
+
+.starred h2,
+.repos h2 {
+    margin: 0;
+}
+
+.starred ul,
+.repos ul {
+    margin: 5px 0;
+}
+
